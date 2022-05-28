@@ -394,7 +394,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-6 col-form-label">Is there an impact in the printing
+                                        <label for="impact_txt" class="col-sm-6 col-form-label">Is there an impact in
+                                            the printing
                                             capabilities of the business?</label>
                                         <div class="col-sm-6">
                                             <select class="form-control" id="impact_txt">
@@ -405,7 +406,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-6 col-form-label">Is the company production down because of
+                                        <label for="production_impact_txt" class="col-sm-6 col-form-label">Is the
+                                            company production down because of
                                             the issue?</label>
                                         <div class="col-sm-6">
                                             <select class="form-control" id="production_impact_txt">
@@ -870,10 +872,10 @@
     }
 
     function setTitle() {
-        let case_title = document.getElementById("RequestreceivedfromEmail").value+
-            document.getElementById("country").value + ' | '+
-            document.getElementById("solution_name").value + ' | '+
-            document.getElementById("solution_version").value + ' | '+
+        let case_title = document.getElementById("RequestreceivedfromEmail").value +
+            document.getElementById("country").value + ' | ' +
+            document.getElementById("solution_name").value + ' | ' +
+            document.getElementById("solution_version").value + ' | ' +
             document.getElementById("issue_desc").value
 
 
@@ -898,21 +900,21 @@
 
             "Is there an impact in the printing capabilities of the business: " + document.getElementById("impact_txt").value + "<br/>" + "<br/>" +
 
-            "Is the company production down because of the issue: " + document.getElementById("production_impact_txt").value + "<br/>" + "<br/>"+
-            "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>"+
-            "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>"+
-            "Issue Description: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>"+
-            "Printer Firmware version: " + document.getElementById("fw_version").value + "<br/>" + "<br/>"+
+            "Is the company production down because of the issue: " + document.getElementById("production_impact_txt").value + "<br/>" + "<br/>" +
+            "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
+            "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>" +
+            "Issue Description: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>" +
+            "Printer Firmware version: " + document.getElementById("fw_version").value + "<br/>" + "<br/>" +
 
-        "Server OS version: " +document.getElementById("os_version").value + "<br/>" + "<br/>" +
+            "Server OS version: " + document.getElementById("os_version").value + "<br/>" + "<br/>" +
 
-        "Troubleshoot done by the Customer/Partner:" + "<br/>" + "<br/>" +
+            "Troubleshoot done by the Customer/Partner:" + "<br/>" + "<br/>" +
 
-        document.getElementById("troubleshoot").value + "<br/>" + "<br/>" + "<br/>" +
+            document.getElementById("troubleshoot").value + "<br/>" + "<br/>" + "<br/>" +
 
-        "Onsite visit : " +document.getElementById("onsite").value + "<br/>" + "<br/>" +
+            "Onsite visit : " + document.getElementById("onsite").value + "<br/>" + "<br/>" +
 
-        "First Installation: " +document.getElementById("first_install").value + "<br/>" + "<br/>"
+            "First Installation: " + document.getElementById("first_install").value + "<br/>" + "<br/>"
 
 
         $('#template_data').html(template_content_value)
