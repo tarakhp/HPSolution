@@ -632,42 +632,18 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="fw_version" class="col-sm-4 col-form-label">Printer Firmware version
-                                            (if
-                                            available):</label>
+                                        <label for="fw_version" class="col-sm-4 col-form-label">Severity :</label>
                                         <div class="col-sm-8">
                                             <select class="form-control js-example-tags" id="fw_version">
-                                                <option selected="" value="">NA</option>
-                                                <option>Future Smart 5.1</option>
-                                                <option>Future Smart 4.11.0.2</option>
-                                                <option>Future Smart 4.11.0.1</option>
-                                                <option>Future Smart 4.10.0.3</option>
-                                                <option>Future Smart 4.9</option>
-                                                <option>Future Smart 4.9.0.1</option>
-                                                <option>Future Smart 3.9.5</option>
-                                                <option>Future Smart 3.9.6</option>
-                                                <option>1940C</option>
-                                                <option>1850B</option>
-                                                <option>1903B</option>
-                                                <option>1921A</option>
+                                                <option selected="" value="Severity : NA">NA</option>
+                                                <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">Complete outage (Severity 1)</option>
+                                                <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">Major outage (Severity 2)</option>
+                                                <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">Standard issue (Severity 3)</option>
+
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="os_version" class="col-sm-4 col-form-label">Server OS
-                                            version:</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control js-example-tags" id="os_version">
-                                                <option selected="" value="">NA</option>
-                                                <option>Windows Server 2008</option>
-                                                <option>Windows Server 2008 R2</option>
-                                                <option>Windows Server 2012</option>
-                                                <option>Windows Server 2012 R2</option>
-                                                <option>Windows Server 2016</option>
-                                                <option>Windows Server 2019</option>
-                                            </select>
-                                        </div>
-                                    </div>
+
 
 
                                 </div>
@@ -957,9 +933,7 @@
             "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>" +
             "Issue Description: " + document.getElementById("issue_desc").value + "<br/>" + "<br/>" +
             "Printer: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>" +
-            "Printer Firmware version: " + document.getElementById("fw_version").value + "<br/>" + "<br/>" +
-
-            "Server OS version: " + document.getElementById("os_version").value + "<br/>" + "<br/>" +
+            document.getElementById("fw_version").value + "<br/>" + "<br/>" +
 
             "Troubleshoot done by the Customer/Partner:" + "<br/>" + "<br/>" +
 
