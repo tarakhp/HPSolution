@@ -52,14 +52,14 @@
                                     <div class="form-group row">
                                         <label for="name_txt" class="col-sm-2 col-form-label">Name:</label>
                                         <div class="col-sm-10">
-                                            <input type="name" placeholder="Partner’s name" class="form-control"
+                                            <input type="name" placeholder="Contact’s name" class="form-control"
                                                    id="name_txt">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email_txt" class="col-sm-2 col-form-label">Email:</label>
                                         <div class="col-sm-10">
-                                            <input type="email" placeholder="Partner’s email" class="form-control"
+                                            <input type="email" placeholder="Contact’s email" class="form-control"
                                                    id="email_txt">
                                         </div>
                                     </div>
@@ -622,7 +622,6 @@
 
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label for="printer_txt" class="col-sm-4 col-form-label">Printer (if
                                             available):</label>
@@ -630,12 +629,11 @@
                                             <input type="text" id="printer_txt" class="form-control" value="NA">
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
-                                        <label for="fw_version" class="col-sm-4 col-form-label">Severity :</label>
+                                        <label for="fw_version" class="col-sm-4 col-form-label">Issue severity :</label>
                                         <div class="col-sm-8">
                                             <select class="form-control js-example-tags" id="fw_version">
-                                                <option selected="" value="Severity : NA">NA</option>
+                                                <option selected="" value="Issue severity : NA">NA</option>
                                                 <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">Complete outage (Severity 1)</option>
                                                 <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">Major outage (Severity 2)</option>
                                                 <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">Standard issue (Severity 3)</option>
@@ -643,9 +641,6 @@
                                             </select>
                                         </div>
                                     </div>
-
-
-
                                 </div>
                                 <div class="col-7">
                                     <div class="form-group row">
@@ -667,7 +662,6 @@
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label for="first_install" class="col-sm-4 col-form-label">First
                                             Installation:</label>
@@ -681,7 +675,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <label for="RequestreceivedfromEmail" class="col-sm-4 col-form-label">Request
-                                            received from Email:</label>
+                                            received by Email:</label>
                                         <div class="col-sm-8">
                                             <select class="form-control" id="RequestreceivedfromEmail">
                                                 <option selected="" disabled="" value="">Choose an option</option>
@@ -911,7 +905,7 @@
     }
 
     function setContent() {
-        let template_content_value = "Partner contact details: " + "<br/>" + "<br/>"
+        let template_content_value = "Contact details: " + "<br/>" + "<br/>"
 
         template_content_value +=
             "SAID: " + document.getElementById("said_txt").value + "<br/>" + "<br/>" +
