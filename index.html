@@ -41,7 +41,7 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="said_txt" class="col-sm-2 col-form-label">SAID:</label>
                                         <div class="col-sm-10">
@@ -64,6 +64,8 @@
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="col-6">
                                     <div class="form-group row">
                                         <label for="country" class="col-sm-2 col-form-label">Country:</label>
                                         <div class="col-sm-10">
@@ -365,7 +367,6 @@
                                         </div>
 
                                     </div>
-
                                     <div class="form-group row">
                                         <label for="phone_txt" class="col-sm-2 col-form-label">Phone:</label>
                                         <div class="col-sm-10">
@@ -375,48 +376,6 @@
                                     </div>
 
 
-                                </div>
-                                <div class="col-7">
-                                    <div class="form-group row">
-                                        <label for="total_devices_txt" class="col-sm-6 col-form-label">The total number
-                                            of devices:</label>
-                                        <div class="col-sm-6">
-                                            <input value="1" type="number" class="form-control" id="total_devices_txt"
-                                                   placeholder="1">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="affected_devices_txt" class="col-sm-6 col-form-label">How many
-                                            production devices are critically impacted?</label>
-                                        <div class="col-sm-6">
-                                            <input value="1" type="number" class="form-control"
-                                                   id="affected_devices_txt" placeholder="1">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="impact_txt" class="col-sm-6 col-form-label">Is there an impact in
-                                            the printing
-                                            capabilities of the business?</label>
-                                        <div class="col-sm-6">
-                                            <select class="form-control" id="impact_txt">
-                                                <option selected="" disabled="" value="NA">Choose an option</option>
-                                                <option value="Yes">Yes</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="production_impact_txt" class="col-sm-6 col-form-label">Is the
-                                            company production down because of
-                                            the issue?</label>
-                                        <div class="col-sm-6">
-                                            <select class="form-control" id="production_impact_txt">
-                                                <option selected="" disabled="" value="NA">Choose an option</option>
-                                                <option value="Yes">Yes</option>
-                                                <option value="No">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
@@ -441,7 +400,7 @@
                                         <label for="solution_name" class="col-sm-4 col-form-label">Solution
                                             Name:</label>
                                         <div class="col-sm-8">
-                                            <select class="form-control js-example-tags" id="solution_name">
+                                            <select onchange="selectedchange(this.value)" class="form-control js-example-tags" id="solution_name">
                                                 <option selected="" value="">NA</option>
                                                 <option>Accuroute</option>
                                                 <option>AutoStore</option>
@@ -492,46 +451,6 @@
                                         <div class="col-sm-8">
                                             <select class="form-control js-example-tags" id="solution_version">
                                                 <option selected="">NA</option>
-                                                <option>V1 R3.0.010</option>
-                                                <option>V1 R3.0.013</option>
-                                                <option>V1 R3.0.015</option>
-                                                <option>V1 R3.0.017</option>
-                                                <option>V1 R3.0.018</option>
-                                                <option>V1 R3.0.021</option>
-                                                <option>V1 R3.0.023</option>
-                                                <option>V1 R3.0.024</option>
-                                                <option>14.2</option>
-                                                <option>15.0</option>
-                                                <option>15.1</option>
-                                                <option>15.2</option>
-                                                <option>15.2.1</option>
-                                                <option>15.2.2</option>
-                                                <option>15.3</option>
-                                                <option>15.3.1</option>
-                                                <option>15.3.2</option>
-                                                <option>15.3.3</option>
-                                                <option>16.0</option>
-                                                <option>16.1</option>
-                                                <option>16.2</option>
-                                                <option>16.3</option>
-                                                <option>16.4</option>
-                                                <option>16.5</option>
-                                                <option>16.6</option>
-                                                <option>16.7</option>
-                                                <option>16.7.1</option>
-                                                <option>16.8</option>
-                                                <option>16.8.1</option>
-                                                <option>1.3.0</option>
-                                                <option>1.4.0</option>
-                                                <option>1.5.0</option>
-                                                <option>1.5.1</option>
-                                                <option>1.6.0</option>
-                                                <option>1.6.1</option>
-                                                <option>1.7.0</option>
-                                                <option>1.7.0 FP1</option>
-                                                <option>1.8.0</option>
-                                                <option>1.9.0</option>
-                                                <option>2.0.0</option>
                                             </select>
 
                                         </div>
@@ -674,13 +593,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="RequestreceivedfromEmail" class="col-sm-4 col-form-label">Request
-                                            received by Email:</label>
+                                        <label for="RequestreceivedfromEmail" class="col-sm-4 col-form-label">Request type:</label>
                                         <div class="col-sm-8">
                                             <select class="form-control" id="RequestreceivedfromEmail">
                                                 <option selected="" disabled="" value="">Choose an option</option>
-                                                <option value="Email | ">Yes</option>
-                                                <option value="">No</option>
+                                                <option value="Email | ">Received by email</option>
+                                                <option value="Phone |">Received by phone</option>
                                             </select>
                                         </div>
                                     </div>
@@ -868,6 +786,68 @@
 <p id="res"></p>
 
 <script>
+
+
+    function selectedchange(value){
+        if(value=="HP Access Control (HP AC)"){
+            str="<option selected=\"\">NA</option>"+
+                "<option>V1 R3.0.010</option>" +
+                "<option>V1 R3.0.013</option>" +
+                "<option>V1 R3.0.015</option>" +
+                "<option>V1 R3.0.017</option>" +
+                "<option>V1 R3.0.018</option>" +
+                "<option>V1 R3.0.021</option>" +
+                "<option>V1 R3.0.023</option>" +
+                "<option>V1 R3.0.024</option>"
+        }else{
+            if(value=="HP Advance"){
+                console.log(2);
+                str="<option selected=\"\">NA</option>"+
+                    "<option>14.2</option>" +
+                    "<option>15.0</option>" +
+                    "<option>15.1</option>" +
+                    "<option>15.2</option>" +
+                    "<option>15.2.1</option>" +
+                    "<option>15.2.2</option>" +
+                    "<option>15.3</option>" +
+                    "<option>15.3.1</option>" +
+                    "<option>15.3.2</option>" +
+                    "<option>15.3.3</option>" +
+                    "<option>16.0</option>" +
+                    "<option>16.1</option>" +
+                    "<option>16.2</option>" +
+                    "<option>16.3</option>" +
+                    "<option>16.4</option>" +
+                    "<option>16.5</option>" +
+                    "<option>16.6</option>" +
+                    "<option>16.7</option>" +
+                    "<option>16.7.1</option>" +
+                    "<option>16.8</option>" +
+                    "<option>16.8.1</option>"
+            }else{
+                if(value=="HP Capture & Route (HP CR)"){
+                    console.log(3);
+                    str="<option selected=\"\">NA</option>"+
+                        "<option>1.3.0</option>" +
+                        "<option>1.4.0</option>" +
+                        "<option>1.5.0</option>" +
+                        "<option>1.5.1</option>" +
+                        "<option>1.6.0</option>" +
+                        "<option>1.6.1</option>" +
+                        "<option>1.7.0</option>" +
+                        "<option>1.7.0 FP1</option>" +
+                        "<option>1.8.0</option>" +
+                        "<option>1.9.0</option>" +
+                        "<option>2.0.0</option>"
+                }else{
+                    console.log(4);
+                    str="<option selected=\"\">NA</option>";
+                }
+            }
+        }
+        document.getElementById("solution_version").innerHTML = str;
+    }
+
     $(".js-example-tags").select2({
         tags: true
     });
@@ -916,14 +896,7 @@
 
             "Phone: " + document.getElementById("phone_txt").value + "<br/>" + "<br/>" +
 
-            "The total number of devices: " + document.getElementById("total_devices_txt").value + "<br/>" + "<br/>" +
-
-            "How many production devices are critically impacted: " + document.getElementById("affected_devices_txt").value + "<br/>" + "<br/>" +
-
-            "Is there an impact in the printing capabilities of the business: " + document.getElementById("impact_txt").value + "<br/>" + "<br/>" +
-
-            "Is the company production down because of the issue: " + document.getElementById("production_impact_txt").value + "<br/>" + "<br/>" +
-            "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
+           "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
             "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>" +
             "Issue Description: " + document.getElementById("issue_desc").value + "<br/>" + "<br/>" +
             "Printer: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>" +
