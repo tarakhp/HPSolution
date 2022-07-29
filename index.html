@@ -376,7 +376,6 @@
                                     </div>
 
 
-
                                 </div>
                             </div>
 
@@ -400,7 +399,8 @@
                                         <label for="solution_name" class="col-sm-4 col-form-label">Solution
                                             Name:</label>
                                         <div class="col-sm-8">
-                                            <select onchange="selectedchange(this.value)" class="form-control js-example-basic-single" id="solution_name">
+                                            <select onchange="selectedchange(this.value)"
+                                                    class="form-control js-example-basic-single" id="solution_name">
                                                 <option selected="" value="">NA</option>
                                                 <option>Accuroute</option>
                                                 <option>AutoStore</option>
@@ -445,6 +445,14 @@
                                                 <option selected="">NA</option>
                                             </select>
 
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="version_type_txt"
+                                               class="col-sm-4 col-form-label">Technology:</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="version_type_txt" class="form-control" value="NA"
+                                                   disabled="disabled">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -545,9 +553,15 @@
                                         <div class="col-sm-8">
                                             <select class="form-control js-example-tags" id="fw_version">
                                                 <option selected="" value="Issue severity : NA">NA</option>
-                                                <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">Complete outage (Severity 1)</option>
-                                                <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">Major outage (Severity 2)</option>
-                                                <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">Standard issue (Severity 3)</option>
+                                                <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">
+                                                    Complete outage (Severity 1)
+                                                </option>
+                                                <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">
+                                                    Major outage (Severity 2)
+                                                </option>
+                                                <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">
+                                                    Standard issue (Severity 3)
+                                                </option>
 
                                             </select>
                                         </div>
@@ -585,7 +599,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="RequestreceivedfromEmail" class="col-sm-4 col-form-label">Request type:</label>
+                                        <label for="RequestreceivedfromEmail" class="col-sm-4 col-form-label">Request
+                                            type:</label>
                                         <div class="col-sm-8">
                                             <select class="form-control" id="RequestreceivedfromEmail">
                                                 <option selected="" disabled="" value="">Choose an option</option>
@@ -780,9 +795,9 @@
 <script>
 
 
-    function selectedchange(value){
-        if(value=="HP Access Control"){
-            str="<option selected=\"\">NA</option>"+
+    function selectedchange(value) {
+        if (value == "HP Access Control") {
+            str = "<option selected=\"\">NA</option>" +
                 "<option>14.2</option>" +
                 "<option>15.0</option>" +
                 "<option>15.1</option>" +
@@ -804,9 +819,9 @@
                 "<option>16.7.1</option>" +
                 "<option>16.8</option>" +
                 "<option>16.8.1</option>"
-        }else{
-            if(value=="HP Advance"){
-                str="<option selected=\"\">NA</option>"+
+        } else {
+            if (value == "HP Advance") {
+                str = "<option selected=\"\">NA</option>" +
                     "<option>V1 R3.0.010</option>" +
                     "<option>V1 R3.0.013</option>" +
                     "<option>V1 R3.0.015</option>" +
@@ -816,9 +831,9 @@
                     "<option>V1 R3.0.023</option>" +
                     "<option>V1 R3.0.024</option>"
 
-            }else{
-                if(value=="HP Capture and Route"){
-                    str="<option selected=\"\">NA</option>"+
+            } else {
+                if (value == "HP Capture and Route") {
+                    str = "<option selected=\"\">NA</option>" +
                         "<option>1.3.0</option>" +
                         "<option>1.4.0</option>" +
                         "<option>1.5.0</option>" +
@@ -830,16 +845,16 @@
                         "<option>1.8.0</option>" +
                         "<option>1.9.0</option>" +
                         "<option>2.0.0</option>"
-                }else{
-                    if(value=="HP Web Jetadmin"){
-                        str="<option selected=\"\">NA</option>"+
+                } else {
+                    if (value == "HP Web Jetadmin") {
+                        str = "<option selected=\"\">NA</option>" +
                             "<option>8.1.3544</option>" +
                             "<option>8.1.3638</option>" +
                             "<option>8.1.3647</option>" +
                             "<option>8.1.3661</option>" +
                             "<option>8.1.3665</option>" +
                             "<option>8.1.3674</option>" +
-                            "<option>8.1.3690</option>"+
+                            "<option>8.1.3690</option>" +
                             "<option>10.0.34060</option>" +
                             "<option>10.0.36664</option>" +
                             "<option>10.0.38258</option>" +
@@ -847,7 +862,7 @@
                             "<option>10.0.42691</option>" +
                             "<option>10.0.46954</option>" +
                             "<option>10.0.48068</option>" +
-                            "<option>10.0.49299</option>"+
+                            "<option>10.0.49299</option>" +
                             "<option>10.1.52747</option>" +
                             "<option>10.1.53182</option>" +
                             "<option>10.1.53575</option>" +
@@ -855,7 +870,7 @@
                             "<option>10.1.55407</option>" +
                             "<option>10.1.56108</option>" +
                             "<option>10.1.58563</option>" +
-                            "<option>10.1.60802</option>"+
+                            "<option>10.1.60802</option>" +
                             "<option>10.2.58560</option>" +
                             "<option>10.2.59093</option>" +
                             "<option>10.2.62227</option>" +
@@ -865,7 +880,7 @@
                             "<option>10.2.73942</option>" +
                             "<option>10.2.74918</option>" +
                             "<option>10.2.77156</option>" +
-                            "<option>10.2.80493</option>"+
+                            "<option>10.2.80493</option>" +
                             "<option>10.3.83654</option>" +
                             "<option>10.3.85669</option>" +
                             "<option>10.3.86392</option>" +
@@ -874,7 +889,7 @@
                             "<option>10.3.91358</option>" +
                             "<option>10.3.93671</option>" +
                             "<option>10.3.93994</option>" +
-                            "<option>10.3.96073</option>"+
+                            "<option>10.3.96073</option>" +
                             "<option>10.4.98174</option>" +
                             "<option>10.4.99186</option>" +
                             "<option>10.4.99821</option>" +
@@ -889,52 +904,82 @@
                             "<option>10.4.109068</option>" +
                             "<option>10.4.110153</option>" +
                             "<option>10.4.110231</option>" +
-                            "<option>10.4.111315</option>"+
+                            "<option>10.4.111315</option>" +
                             "<option>10.5.112785</option>" +
                             "<option>10.5.113341</option>" +
                             "<option>10.5.114213</option>" +
                             "<option>10.5.114911</option>";
-                    }else{
-                        if(value=="HP JetAdvantage Security Manager"){
-                            str="<option selected=\"\">NA</option>"+
-                            "<option>2.1.0.11940</option>" +
-                            "<option>2.1.0.11952</option>" +
-                            "<option>2.1.0.12023</option>" +
-                            "<option>2.1.1.33391</option>" +
-                            "<option>2.1.2.36831</option>" +
-                            "<option>2.1.4.39777</option>" +
-                            "<option>2.1.4.40515</option>" +
-                            "<option>2.1.5.43780</option>" +
-                            "<option>2.1.5.44493</option>" +
-                            "<option>2.1.5.49622</option>" +
-                            "<option>2.1.5.56486</option>"+
-                            "<option>3.0.0.55479</option>" +
-                            "<option>3.0.1.59138</option>"+
-                            "<option>3.1.0.65238</option>"+
-                            "<option>3.2.0.8389</option>" +
-                            "<option>3.2.1.12050</option>" +
-                            "<option>3.2.1.12855</option>"+
-                            "<option>3.3.0.15855</option>"+
-                            "<option>3.4.0.16986</option>"+
-                            "<option>3.5.0.19036</option>" +
-                            "<option>3.5.1.19514</option>"+
-                            "<option>3.6.0.20307</option>" +
-                            "<option>3.6.1.20676</option>"+
-                            "<option>3.7.0.21144</option>" +
-                            "<option>3.7.1.21413</option>";
-                        }else{
-                    str="<option selected=\"\">NA</option>";}}
+                    } else {
+                        if (value == "HP JetAdvantage Security Manager") {
+                            str = "<option selected=\"\">NA</option>" +
+                                "<option>2.1.0.11940</option>" +
+                                "<option>2.1.0.11952</option>" +
+                                "<option>2.1.0.12023</option>" +
+                                "<option>2.1.1.33391</option>" +
+                                "<option>2.1.2.36831</option>" +
+                                "<option>2.1.4.39777</option>" +
+                                "<option>2.1.4.40515</option>" +
+                                "<option>2.1.5.43780</option>" +
+                                "<option>2.1.5.44493</option>" +
+                                "<option>2.1.5.49622</option>" +
+                                "<option>2.1.5.56486</option>" +
+                                "<option>3.0.0.55479</option>" +
+                                "<option>3.0.1.59138</option>" +
+                                "<option>3.1.0.65238</option>" +
+                                "<option>3.2.0.8389</option>" +
+                                "<option>3.2.1.12050</option>" +
+                                "<option>3.2.1.12855</option>" +
+                                "<option>3.3.0.15855</option>" +
+                                "<option>3.4.0.16986</option>" +
+                                "<option>3.5.0.19036</option>" +
+                                "<option>3.5.1.19514</option>" +
+                                "<option>3.6.0.20307</option>" +
+                                "<option>3.6.1.20676</option>" +
+                                "<option>3.7.0.21144</option>" +
+                                "<option>3.7.1.21413</option>";
+                        } else {
+                            str = "<option selected=\"\">NA</option>";
+                        }
+                    }
                 }
             }
         }
         document.getElementById("solution_version").innerHTML = str;
+        var Connectivity = ["HP Web Jetadmin", "HP JetAdvantage Security Manager", "Connectivity"]
+        var Third_party = ["equitrac", "Troy", "Genius Bytes", "AutoStore", "Kofax", "Pharos", "Safecom","Ysoft"]
+        var Cloud = ["Celiveo", "HP PrinterOn", "Everyone Print", "HP Capture and Route", "DSS", "WorkPath", "HP Roam",
+            "Paper Cut", "Accuroute", "DCC","E-print Enterprise"]
+        var Pull_print = ["HP Access Control", "HP Advance", "HP Jet Advantage Secure Print & Insights"]
+        var Related_To_Solutions = ["Badge Reader"]
+
+
+        if (Connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
+            document.getElementById("version_type_txt").value = "Connectivity";
+        } else {
+            if (Third_party.find(element => element.toLowerCase() == value.toLowerCase())) {
+                document.getElementById("version_type_txt").value = "Third-party";
+            } else {
+                if (Cloud.find(element => element.toLowerCase() == value.toLowerCase())) {
+                    document.getElementById("version_type_txt").value = "Cloud";
+                } else {
+                    if (Pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
+                        document.getElementById("version_type_txt").value = "Pull print";
+                    } else {
+                        if (Related_To_Solutions.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value = "Related To Solutions";
+                        } else {
+                            document.getElementById("version_type_txt").value = "NA"
+                        }
+                    }
+                }
+            }
+        }
     }
 
     $(".js-example-tags").select2({
         tags: true
     });
-    $(".js-example-basic-single").select2({
-    });
+    $(".js-example-basic-single").select2({});
 
     function CopyToClipboard(id) {
         var r = document.createRange();
@@ -980,7 +1025,7 @@
 
             "Phone: " + document.getElementById("phone_txt").value + "<br/>" + "<br/>" +
 
-           "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
+            "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
             "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>" +
             "Issue Description: " + document.getElementById("issue_desc").value + "<br/>" + "<br/>" +
             "Printer: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>" +
