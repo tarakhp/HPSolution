@@ -794,7 +794,6 @@
 
 <script>
 
-
     function selectedchange(value) {
         if (value == "HP Access Control") {
             str = "<option selected=\"\">NA</option>" +
@@ -946,21 +945,49 @@
         }
         document.getElementById("solution_version").innerHTML = str;
         var Connectivity = ["HP Web Jetadmin", "HP JetAdvantage Security Manager", "Connectivity"]
-        var Third_party = ["equitrac", "Troy", "Genius Bytes", "AutoStore", "Kofax", "Pharos", "Safecom","Ysoft"]
+        var Third_party = ["equitrac", "Troy", "Genius Bytes", "AutoStore", "Kofax", "Pharos", "Safecom", "Ysoft"]
         var Cloud = ["Celiveo", "HP PrinterOn", "Everyone Print", "HP Capture and Route", "DSS", "WorkPath", "HP Roam",
-            "Paper Cut", "Accuroute", "DCC","E-print Enterprise"]
+            "Paper Cut", "Accuroute", "DCC", "E-print Enterprise"]
         var Pull_print = ["HP Access Control", "HP Advance", "HP Jet Advantage Secure Print & Insights"]
         var Related_To_Solutions = ["Badge Reader"]
 
 
+        var Cloud_pull_print = ["Celiveo", "HP Capture and Route"]
+        var Cloud_connectivity = ["HP PrinterOn", "HP Capture and Route"]
+        var Cloud_command_center = ["Everyone Print"]
+
+        document.getElementById('fw_version').selectedIndex = 0
+        document.getElementById('fw_version').disabled = false;
+
+
         if (Connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
             document.getElementById("version_type_txt").value = "Connectivity";
+            document.getElementById('fw_version').selectedIndex = 3
+            document.getElementById('fw_version').disabled = true;
+
         } else {
             if (Third_party.find(element => element.toLowerCase() == value.toLowerCase())) {
                 document.getElementById("version_type_txt").value = "Third-party";
             } else {
                 if (Cloud.find(element => element.toLowerCase() == value.toLowerCase())) {
                     document.getElementById("version_type_txt").value = "Cloud";
+                    if (Cloud_pull_print.concat(Cloud_connectivity).concat(Cloud_command_center).find(element => element.toLowerCase() == value.toLowerCase())) {
+                        document.getElementById("version_type_txt").value += " (";
+                        if (Cloud_pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += "pull print";
+                        }
+                        if (Cloud_connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += "connectivity";
+                            document.getElementById('fw_version').selectedIndex = 3
+                            document.getElementById('fw_version').disabled = true;
+                        }
+                        if (Cloud_command_center.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += "command center";
+                        }
+
+                        document.getElementById("version_type_txt").value += ")";
+                    }
+
                 } else {
                     if (Pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
                         document.getElementById("version_type_txt").value = "Pull print";
@@ -974,7 +1001,10 @@
                 }
             }
         }
+        $('#fw_version').trigger('change');
+
     }
+
 
     $(".js-example-tags").select2({
         tags: true
@@ -1003,11 +1033,12 @@
     }
 
     function setTitle() {
-        let case_title = document.getElementById("RequestreceivedfromEmail").value +
-            document.getElementById("country").value + ' | ' +
-            document.getElementById("solution_name").value + ' | ' +
+        let case_title =document.getElementById("solution_name").value + ' | ' +
+            'PrintSolutions.Support@hp.com | ' +
+            document.getElementById("RequestreceivedfromEmail").value +
             document.getElementById("solution_version").value + ' | ' +
-            document.getElementById("issue_desc").value
+            document.getElementById("issue_desc").value + ' | ' +
+            document.getElementById("country").value
 
 
         $('#template_title').html(case_title)
@@ -1064,3 +1095,4 @@
 
 </body>
 </html>
+
