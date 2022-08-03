@@ -974,18 +974,18 @@
                     if (Cloud_pull_print.concat(Cloud_connectivity).concat(Cloud_command_center).find(element => element.toLowerCase() == value.toLowerCase())) {
                         document.getElementById("version_type_txt").value += " (";
                         if (Cloud_pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
-                            document.getElementById("version_type_txt").value += "pull print";
+                            document.getElementById("version_type_txt").value += " pull print";
                         }
                         if (Cloud_connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
-                            document.getElementById("version_type_txt").value += "connectivity";
+                            document.getElementById("version_type_txt").value += " connectivity";
                             document.getElementById('fw_version').selectedIndex = 3
                             document.getElementById('fw_version').disabled = true;
                         }
                         if (Cloud_command_center.find(element => element.toLowerCase() == value.toLowerCase())) {
-                            document.getElementById("version_type_txt").value += "command center";
+                            document.getElementById("version_type_txt").value += " command center";
                         }
 
-                        document.getElementById("version_type_txt").value += ")";
+                        document.getElementById("version_type_txt").value += " )";
                     }
 
                 } else {
